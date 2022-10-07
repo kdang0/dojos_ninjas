@@ -7,13 +7,13 @@ from dojo_ninja_app.model.dojo import Dojo
 @app.route('/create_ninja', methods=["POST"])
 def create_ninja():
     Ninja.save(request.form)
-    return redirect('/')
+    return redirect('/dojo')
 
-@app.route('/add_ninja')
+@app.route('/ninjas')
 def add_ninja():
     dojos = Dojo.get_all()
     return render_template("add_ninja.html", dojos=dojos)
 
-@app.route('/show_ninjas')
-def show_ninjas():
-    return render_template("show_dojo.html", ninjas=Ninja.get_all())
+# @app.route('/show_ninjas')
+# def show_ninjas():
+#     return render_template("show_dojo.html", ninjas=Ninja.get_all())
