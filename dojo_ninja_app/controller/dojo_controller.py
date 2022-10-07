@@ -22,3 +22,9 @@ def index():
     dojos = Dojo.get_all()
     return render_template("home.html", dojos = dojos)
 
+
+@app.route('/ninjas')
+def add_ninja():
+    dojos = Dojo.get_all()
+    return render_template("add_ninja.html", dojos=dojos)
+
