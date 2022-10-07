@@ -21,18 +21,19 @@ class Dojo:
         query += "dojos.id = ninjas.dojo_id "
         query += "WHERE dojos.id = %(id)s;"
         results = connectToMySQL('dojo_ninja').query_db(query,data)
-        dojo = cls(results[0])
-        for row_db in results:
-            ninja_data = {
-                "id" : row_db["ninjas.id"],
-                "first_name" : row_db["first_name"],
-                "last_name" : row_db["last_name"],
-                "age" : row_db["age"],
-                "created_at" : row_db["ninjas.created_at"],
-                "updated_at" : row_db["ninjas.updated_at"]
-            }
-            dojo.ninjas.append(ninja.Ninja(ninja_data))
-        return dojo 
+        if results:
+            dojo = cls(results[0])
+            for row_db in results:
+                ninja_data = {
+                    "id" : row_db["ninjas.id"],
+                    "first_name" : row_db["first_name"],
+                    "last_name" : row_db["last_name"],
+                    "age" : row_db["age"],
+                    "created_at" : row_db["ninjas.created_at"],
+                    "updated_at" : row_db["ninjas.updated_at"]
+                }
+                dojo.ninjas.append(ninja.Ninja(ninja_data))
+            return dojo 
     
 
     @classmethod

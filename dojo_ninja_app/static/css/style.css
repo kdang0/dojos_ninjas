@@ -1,6 +1,5 @@
 .div-border{
-    background-color: antiquewhite;
-    border: 3px solid white;
+    background-color: rgb(117, 117, 117);
     overflow-y: scroll;
     height:300px;
     width:300px;
@@ -29,4 +28,8 @@ li{
 
 .center{
     margin: auto;
+}
+
+a{
+    color:white;
 }
