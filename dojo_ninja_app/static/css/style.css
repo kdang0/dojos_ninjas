@@ -1,0 +1,32 @@
+.div-border{
+    background-color: antiquewhite;
+    border: 3px solid white;
+    overflow-y: scroll;
+    height:300px;
+    width:300px;
+}
+
+.gap{
+    gap: 30px;
+}
+
+.button-margin{
+    width:100px;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+.show-dojos{
+    font-size: 30px;
+}
+
+.big-gap{
+    gap:10rem;
+}
+
+.center{
+    margin: auto;
+}

@@ -1,0 +1,4 @@
+    SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos;
+DELETE FROM ninjas;
+SELECT * FROM dojos;
